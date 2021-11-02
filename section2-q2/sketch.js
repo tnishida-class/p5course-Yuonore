@@ -19,7 +19,7 @@ function setup() {
     else if((i + j) % 2 == 1 && j > 4){
       fill(0);
     }
-    ellipse(i * size + size / 2, j * size + size / 2, size - 4, size - 4);
+    ellipse(i * size + size / 2, j * size + size / 2, size * 0.8, size * 0.8);
   }
   }
 }
