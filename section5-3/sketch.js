@@ -31,7 +31,7 @@ function daysInYear(y){
 
 function daysInMonth(y, m){
   if(m == 2){
-    return isLeapYear(y) ? 29 : 28;
+    return isLeapYear(y) ? 29 : 28; // 「a ? b : c」と書く三項演算子を使っています
   }
   else if(m == 4 || m == 6 || m == 9 || m == 11){
     return 30;
