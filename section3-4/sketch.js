@@ -1,6 +1,8 @@
 // テキスト「インタラクティブなアニメーション」
 let x, y, vx, vy;
 let grabbed; // 円をつかんでいるかどうかを記憶するために使う変数
+const g = 1; // 重力
+const vyMax = 30;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
@@ -18,8 +20,9 @@ function draw(){
   if(!grabbed){ // つかんでいないときだけアニメーションさせる
     x += vx;
     y += vy;
-    if(x < 0 || x > width){ vx = -0.8 * vx; }
-    if(y < 0 || y > height){ vy = -0.8 * vy; }
+    vy += g;
+    // if(x < 0 || x > width){ vx = -0.8 * vx; }
+    if(y < 0 || y > height){ vy = -0.5 * vy; }
     x = constrain(x, 0, width);
     y = constrain(y, 0, height);
   }
