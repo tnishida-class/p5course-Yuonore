@@ -1,7 +1,6 @@
 // 最終課題を制作しよう
 let x, y, vx, vy, img, bx, by, bvx, bvy;
 let scores = [];
-let balls;
 
 function preload() {
   img1 = loadImage('fire.png');
