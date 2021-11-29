@@ -7,7 +7,7 @@ function setup(){
   crossmark(10, 10, 90, 90);
   ngmark(150, 50, 80);
   star(250, 50, 40);
-  polygon(350, 50, 40);
+  polygon(350, 50, 40, 15);
 }
 
 function crossmark(x1, y1, x2, y2){
@@ -36,10 +36,10 @@ function star(cx, cy, r){
   endShape(CLOSE);
 }
 
-function polygon(cx, cy, r){
+function polygon(cx, cy, r, n){
   beginShape();
-  for(var i = 0; i < 5; i++){
-    let theta = TWO_PI * i * 1 / 5 - HALF_PI;
+  for(var i = 0; i < n; i++){
+    let theta = TWO_PI * i * 1 / n - HALF_PI;
     let x = cx + cos(theta) * r;
     let y = cy + sin(theta) * r;
     vertex(x,y);
