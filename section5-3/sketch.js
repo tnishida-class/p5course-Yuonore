@@ -1,6 +1,7 @@
 // テキスト「関数を作る(2) 結果を戻す関数」～「総仕上げ：カレンダーを描画しよう」
 function setup(){
   createCanvas(200, 200);
+
   calendar(2019, 10);
 
   // isLeapYear の動作確認のため console に出力しています
@@ -12,7 +13,11 @@ function setup(){
       console.log(i + "年はうるう年ではありません");
     }
   }
+
+
 }
+
+
 
 function calendar(y, m){
   let dow = dayOfWeek(y, m, 1);
@@ -27,6 +32,7 @@ function isLeapYear(y){
 
 function daysInYear(y){
   // BLANK[1]
+  return isLeapYear(y) ? 366 : 365;
 }
 
 function daysInMonth(y, m){
