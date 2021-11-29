@@ -14,5 +14,17 @@ function setup(){
   let total = 0;
   for(let i = 0; i < scores.length; i++){ total += scores[i]; }
 
-  // BLANK[1]
+
+
+for(let i = 0; i < scores.length; i++){
+  let sum = 0;
+  for(let j = 0; j < i; j++){ sum += scores[j]; }
+
+  let start = TWO_PI / total * sum
+  let stop = TWO_PI / total * (sum + scores[i])
+
+  arc(width * 0.5, height * 0.5, width * 0.8, height * 0.8, start, stop, PIE);
+
+  text(scores[i].toPrecision(3),width * 0.5 + width * 0.3 * cos((start + stop) / 2), height * 0.5 + height * 0.3 * sin((start + stop) / 2))
+}
 }
