@@ -113,7 +113,7 @@ function gameClear(){
   fill(255,255,0);
   textFont('cursive');
   textSize(80);
-  text('congulaturation!!', width / 2 - 3 * 80, height / 2);
+  text('congratulations!!', width / 2 - 3 * 80, height / 2);
   pop();
 }
 
